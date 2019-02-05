@@ -36,13 +36,10 @@ main {
     width: 100%;
     background: #2ddf5c;
     padding: .5rem 1rem;
-    z-index: 2;
-}
-
-/* Just using the combinator in the case to select the div for demonstration purposes */
-.main-header > div {
-    display: inline-block;
-    vertical-align: middle;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .toggle-button {
@@ -72,15 +69,13 @@ main {
     color: #0e4f1f;
     text-decoration: none;
     font-weight: bold;
-    height: 2.5rem;
     width: 1.25rem;
-    display: inline-block;
-    vertical-align: middle;
 }
 
 .main-header__brand img {
-    height: 100%;
+    height: 2.5rem;
     padding-left: 3rem;
+    vertical-align: middle;
 }
 
 .main-nav {
@@ -91,6 +86,7 @@ main {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
 }
 
 @media (min-width: 40rem) {
@@ -103,15 +99,11 @@ main {
     }
 
     .main-nav {
-        display: inline-block;
-        text-align: right;
-        width: calc(100% - 44px);
-        vertical-align: middle;
+        display: flex;
     }
 }
 
 .main-nav__item {
-    display: inline-block;
     margin: 0 1rem;
 }
 
@@ -156,18 +148,23 @@ main {
     list-style: none;
     margin: 0;
     padding: 0;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main-footer__link {
-    display: block;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 
 @media (min-width: 40rem) {
     .main-footer__link {
-        display: inline-block;
         margin: 0 1rem;
+    }
+
+    .main-footer__links {
+        flex-direction: row;
+        justify-content: center;
     }
 }
 
@@ -195,10 +192,13 @@ main {
 .mobile-nav__items {
     width: 90%;
     height: 100%;
-    list-style: none;
-    margin: 10% auto;
+    margin: 0 auto;
     padding: 0;
-    text-align: center;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
   
 .mobile-nav__item {
