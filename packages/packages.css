@@ -31,6 +31,7 @@ main {
     margin: 1rem 0;
     position: relative;
     z-index: 1;
+    overflow: hidden;
 }
 
 .package:hover,
@@ -54,13 +55,16 @@ main {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 1.25rem;
+    margin: 0;
     font-size: 0.75rem;
     color: white;
     background: #ff5454;
     padding: 0.5rem;
-    border-radius: 8px;
     z-index: 5;
+    transform: rotate(45deg) translate(3.5rem, -1rem);
+    transform-origin: center;
+    width: 12rem;
+    text-align: center;
 }
 
 .package__annotation {
